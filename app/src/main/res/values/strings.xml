@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Insight Check Employee</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo">logo</string>
+    <string name="back_button">back_button</string>
+    <string name="company_policies_amp_health_benefits">company_policies_amp_health_benefits</string>
+    <string name="suggestionlogo">suggestionLogo</string>
+    <string name="enter_the_feedback">Enter the feedback</string>
+    <string name="submit">Submit</string>
+    <string name="speak_up_be_heard_nyour_feedback_nmatters">Speak Up, Be Heard: \nYour Feedback\nMatters!</string>
+    <string name="submitButton">Submit</string>
+    <string name="enter_your_feedback">enter your feedback</string>
+    <string name="Enter_the_feedback">Enter the feedback</string>
+    <string name="send_request">Send Request</string>
+    <string name="enter_the_message">Enter the message</string>
+    <string name="leave_request">Leave Request</string>
+    <string name="back_arrow">back_arrow</string>
+    <string name="leaveLogo">LOGO</string>
+    <string name="upload">Upload</string>
+    <string name="team_name">"  Team Name"</string>
+    <string name="supervised_by">"  Supervised By"</string>
+    <string name="update_profile">"  Update profile"</string>
+    <string name="phone_number">"  Phone Number"</string>
+</resources>
