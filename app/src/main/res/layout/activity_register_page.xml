@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.SignUp_Page">
+    tools:context=".Activities.Register_Page">
 
     <ImageView
         android:id="@+id/ivSinUpLogo"
@@ -76,15 +76,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv3Register">
-                <EditText
-                    android:id="@+id/etSinUpName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="Name"
-                    android:textSize="@dimen/et_text_size"
-                    android:labelFor="@id/etSinUpName"
-                    />
+        <EditText
+            android:id="@+id/etSinUpName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Name"
+            android:textSize="@dimen/et_text_size"
+            android:labelFor="@id/etSinUpName"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -104,15 +104,15 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilName">
-                <EditText
-                    android:id="@+id/etSinUpEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="Email ID"
-                    android:textSize="@dimen/et_text_size"
-                    android:labelFor="@id/etSinUpEmail"
-                    />
+        <EditText
+            android:id="@+id/etSinUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email ID"
+            android:textSize="@dimen/et_text_size"
+            android:labelFor="@id/etSinUpEmail"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -133,15 +133,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tilEmail"
         app:passwordToggleEnabled="true">
-                <EditText
-                    android:id="@+id/etSinUpPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:hint="Password"
-                    android:textSize="@dimen/et_text_size"
-                    android:labelFor="@id/etSinUpPassword"
-                    />
+        <EditText
+            android:id="@+id/etSinUpPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textSize="@dimen/et_text_size"
+            android:labelFor="@id/etSinUpPassword"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
