@@ -1,9 +1,10 @@
-package com.example.insightcheckemployee
+package com.example.insightcheckemployee.Activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
+import com.example.insightcheckemployee.R
 
 class Splash_Screen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

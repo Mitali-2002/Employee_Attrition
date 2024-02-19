@@ -1,8 +1,8 @@
-package com.example.insightcheckemployee
+package com.example.insightcheckemployee.Activities
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.insightcheckemployee.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

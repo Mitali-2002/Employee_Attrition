@@ -1,7 +1,8 @@
-package com.example.insightcheckemployee
+package com.example.insightcheckemployee.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.insightcheckemployee.R
 
 class SignUp_Page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

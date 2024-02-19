@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_Page">
+    tools:context=".Activities.LoginPage">
 
     <!-- Email Input Field -->
 
@@ -27,13 +27,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv3">
 
-                <EditText
-                    android:id="@+id/etSinInEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email ID"
-                    android:inputType="textEmailAddress"
-                    android:textSize="@dimen/et_text_size" />
+        <EditText
+            android:id="@+id/etSinInEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/et_text_size" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
