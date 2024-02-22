@@ -1,4 +1,4 @@
-package com.example.insightcheckemployee
+package com.example.insightcheckemployee.Fragments
 
 
 import android.content.Intent
@@ -13,6 +13,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
+import com.example.insightcheckemployee.Activities.CalendarAdapter
+import com.example.insightcheckemployee.Activities.CalendarDateModel
+import com.example.insightcheckemployee.Activities.CompanyPolicies
+import com.example.insightcheckemployee.R
+import com.example.insightcheckemployee.Activities.SuggestionBox
 
 import java.util.*
 

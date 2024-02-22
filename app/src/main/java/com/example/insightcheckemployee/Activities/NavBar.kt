@@ -1,8 +1,14 @@
-package com.example.insightcheckemployee
+package com.example.insightcheckemployee.Activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.insightcheckemployee.Fragments.Home
+import com.example.insightcheckemployee.Fragments.Leave
+import com.example.insightcheckemployee.Fragments.Message
+import com.example.insightcheckemployee.Fragments.Profile
+import com.example.insightcheckemployee.Fragments.Upload
+import com.example.insightcheckemployee.R
 import com.example.insightcheckemployee.databinding.ActivityNavbarBinding
 
 class NavBar : AppCompatActivity () {

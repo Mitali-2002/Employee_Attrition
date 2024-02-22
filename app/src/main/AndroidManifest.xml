@@ -13,9 +13,6 @@
         android:theme="@style/Theme.InsightCheckEmployee"
         tools:targetApi="31">
         <activity
-            android:name=".ReviewForm"
-            android:exported="false" />
-        <activity
             android:name=".SuggestionBox"
             android:exported="false" />
         <activity
