@@ -44,6 +44,8 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
         ivCalendarPrevious = view.findViewById(R.id.iv_calendar_previous)
         val goToCompanyPoliciesButton: View = view.findViewById(R.id.companyPolicy)
         val goToSuggestionBox: View = view.findViewById(R.id.suggestionButton)
+        val goToReviewFormButton: View = view.findViewById(R.id.reviewFormButton)
+
         setUpAdapter()
 
         ivCalendarNext.setOnClickListener {
@@ -69,6 +71,11 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
             val intent1 = Intent(activity, SuggestionBox::class.java)
             startActivity(intent1)
         }
+        goToReviewFormButton.setOnClickListener {
+            val intent1 = Intent(activity,ReviewForm::class.java)
+            startActivity(intent1)
+        }
+
 
         return view
     }
