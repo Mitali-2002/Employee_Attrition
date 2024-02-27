@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.SnapHelper
 import com.example.insightcheckemployee.Activities.CalendarAdapter
 import com.example.insightcheckemployee.Activities.CalendarDateModel
 import com.example.insightcheckemployee.Activities.CompanyPolicies
+import com.example.insightcheckemployee.Activities.ReviewForm
 import com.example.insightcheckemployee.R
 import com.example.insightcheckemployee.Activities.SuggestionBox
 
@@ -77,7 +78,7 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
             startActivity(intent1)
         }
         goToReviewFormButton.setOnClickListener {
-            val intent1 = Intent(activity,ReviewForm::class.java)
+            val intent1 = Intent(activity, ReviewForm::class.java)
             startActivity(intent1)
         }
 
