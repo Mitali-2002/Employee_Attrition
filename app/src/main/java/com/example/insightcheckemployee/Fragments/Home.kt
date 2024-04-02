@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
-import com.example.insightcheckemployee.Activities.CalendarAdapter
+import com.example.insightcheckemployee.adapter.CalendarAdapter
 import com.example.insightcheckemployee.Activities.CalendarDateModel
 import com.example.insightcheckemployee.Activities.CompanyPolicies
 import com.example.insightcheckemployee.R

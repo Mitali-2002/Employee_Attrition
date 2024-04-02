@@ -1,4 +1,4 @@
-package com.example.insightcheckemployee.Activities
+package com.example.insightcheckemployee.adapter
 
 import android.os.Build
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.insightcheckemployee.Activities.CalendarDateModel
 import com.example.insightcheckemployee.R
 
 class CalendarAdapter(private val listener: (calendarDateModel: CalendarDateModel, position: Int) -> Unit) :

@@ -22,4 +22,7 @@
     <string name="supervised_by">"  Supervised By"</string>
     <string name="update_profile">"  Update profile"</string>
     <string name="phone_number">"  Phone Number"</string>
+    <string name="forgot_password_msg">Enter your registered mail below to receive password reset instructions</string>
+    <string name="default_web_client_id" translatable="false">1021200445684-m03v280itc0ek0nal7joocov4gut0hsp.apps.googleusercontent.com</string>
+
 </resources>

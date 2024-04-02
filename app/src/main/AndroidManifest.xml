@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,8 +16,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.SignIn_Page"
-            android:exported="true" >
+            android:name=".Activities.ForgetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.LoginPage"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,13 +34,14 @@
             android:name=".Activities.SuggestionBox"
             android:exported="false" />
         <activity
+            android:name=".Activities.RegisterPage"
+            android:exported="false" />
+        <activity
             android:name=".Activities.CompanyPolicies"
             android:exported="false" />
         <activity
             android:name=".Activities.NavBar"
-            android:exported="true">
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".Activities.Splash_Screen"
             android:exported="false" />

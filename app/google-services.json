@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1021200445684",
+    "project_id": "insight-check-employee",
+    "storage_bucket": "insight-check-employee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1021200445684:android:2ea87248d73eb98415aea1",
+        "android_client_info": {
+          "package_name": "com.example.insightcheckemployee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcEaLAGyPaBBXIQ1caU6nBo_hLl-VrYXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
