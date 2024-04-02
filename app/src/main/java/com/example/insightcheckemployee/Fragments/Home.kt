@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import com.example.insightcheckemployee.adapter.CalendarAdapter
-import com.example.insightcheckemployee.Activities.CalendarDateModel
+import com.example.insightcheckemployee.model.CalendarDateModel
 import com.example.insightcheckemployee.Activities.CompanyPolicies
 import com.example.insightcheckemployee.Activities.PersonalToDoActivity
 import com.example.insightcheckemployee.Activities.ReviewForm

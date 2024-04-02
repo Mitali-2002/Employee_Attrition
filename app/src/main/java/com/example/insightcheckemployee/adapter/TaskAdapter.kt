@@ -1,4 +1,4 @@
-package com.example.insightcheckemployee.Activities
+package com.example.insightcheckemployee.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.insightcheckemployee.Activities.Task
 import com.example.insightcheckemployee.R
 
 class TaskAdapter(private var tasks: MutableList<Task>) : RecyclerView.Adapter<TaskAdapter.ViewHolder>() {
