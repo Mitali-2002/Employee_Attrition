@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.SnapHelper
 import com.example.insightcheckemployee.adapter.CalendarAdapter
 import com.example.insightcheckemployee.Activities.CalendarDateModel
 import com.example.insightcheckemployee.Activities.CompanyPolicies
+import com.example.insightcheckemployee.Activities.PersonalToDoActivity
+import com.example.insightcheckemployee.Activities.ReviewForm
 import com.example.insightcheckemployee.R
 import com.example.insightcheckemployee.Activities.SuggestionBox
 
@@ -49,6 +51,9 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
         ivCalendarPrevious = view.findViewById(R.id.iv_calendar_previous)
         val goToCompanyPoliciesButton: View = view.findViewById(R.id.companyPolicy)
         val goToSuggestionBox: View = view.findViewById(R.id.suggestionButton)
+        val goToReviewFormButton: View = view.findViewById(R.id.reviewFormButton)
+        val goToToDoActivityButton: View = view.findViewById(R.id.toDoButton)
+
         setUpAdapter()
 
         ivCalendarNext.setOnClickListener {
@@ -74,6 +79,15 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
             val intent1 = Intent(activity, SuggestionBox::class.java)
             startActivity(intent1)
         }
+        goToReviewFormButton.setOnClickListener {
+            val intent1 = Intent(activity, ReviewForm::class.java)
+            startActivity(intent1)
+        }
+        goToToDoActivityButton.setOnClickListener {
+            val intent1 = Intent(activity, PersonalToDoActivity::class.java)
+            startActivity(intent1)
+        }
+
 
         return view
     }

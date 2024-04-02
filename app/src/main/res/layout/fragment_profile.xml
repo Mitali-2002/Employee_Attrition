@@ -13,7 +13,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <Button
@@ -55,7 +55,8 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/profile_background"
             android:ems="10"
-            android:hint="  Department"
+            android:paddingLeft="10dp"
+            android:hint="Department"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -70,7 +71,8 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/profile_background"
             android:ems="10"
-            android:hint="  Designation"
+            android:paddingLeft="10dp"
+            android:hint="Designation"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -86,7 +88,8 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/profile_background"
             android:ems="10"
-            android:hint="@string/team_name"
+            android:paddingLeft="10dp"
+            android:hint="Team Name"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -102,7 +105,8 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/profile_background"
             android:ems="10"
-            android:hint="@string/supervised_by"
+            android:paddingLeft="10dp"
+            android:hint="Supervised By"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -132,7 +136,8 @@
             android:layout_marginEnd="24dp"
             android:background="@drawable/profile_background"
             android:ems="10"
-            android:hint="@string/phone_number"
+            android:paddingLeft="10dp"
+            android:hint="Phone Number"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

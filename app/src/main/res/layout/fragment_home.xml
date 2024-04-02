@@ -76,6 +76,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/reviewFormButton"
                 android:background="@drawable/blue_rectangle_background">
 
                 <ImageView
@@ -238,6 +239,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:id="@+id/toDoButton"
                 android:background="@drawable/blue_rectangle_background">
 
                 <TextView
