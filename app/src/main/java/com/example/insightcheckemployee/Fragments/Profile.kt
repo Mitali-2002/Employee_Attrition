@@ -44,7 +44,7 @@ class Profile : Fragment() {
         // Initialize FirebaseAuth
         auth = Firebase.auth
 
-        binding?.btnSignOut?.setOnClickListener {
+        binding?.logoutTv?.setOnClickListener {
             if (auth.currentUser != null) {
                 auth.signOut()
                 startActivity(Intent(requireContext(), LoginPage::class.java))
