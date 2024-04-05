@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activities.UpdateProfile"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ForgetPassword"
             android:exported="false" />
         <activity
@@ -45,15 +48,12 @@
         <activity
             android:name=".Activities.Splash_Screen"
             android:exported="false" />
-
         <activity
             android:name=".Activities.PersonalToDoActivity"
             android:exported="false" />
-
         <activity
             android:name=".Activities.ReviewForm"
             android:exported="false" />
-
         <activity
             android:name=".Activities.MainActivity"
             android:exported="true">
