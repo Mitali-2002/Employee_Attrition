@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.insightcheckemployee.Fragments.Home
 import com.example.insightcheckemployee.R
 import com.example.insightcheckemployee.adapter.TaskAdapter
+import com.example.insightcheckemployee.dataClass.Task
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
