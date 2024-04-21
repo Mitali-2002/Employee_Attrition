@@ -37,7 +37,7 @@ class Leave : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
         // Initialize Firebase
-        database = FirebaseDatabase.getInstance().reference
+        database = FirebaseDatabase.getInstance().getReference("leaveRequests")
         auth = FirebaseAuth.getInstance()
     }
 
@@ -53,27 +53,56 @@ class Leave : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val myCalendar = Calendar.getInstance()
+        val startCalendar = Calendar.getInstance()
+        val endCalendar = Calendar.getInstance()
 
-        val datePicker = DatePickerDialog.OnDateSetListener{ view, year, month, dayofMonth ->
-            myCalendar.set(Calendar.YEAR, year)
-            myCalendar.set(Calendar.MONTH, month)
-            myCalendar.set(Calendar.DAY_OF_MONTH, dayofMonth)
-            updateLable(myCalendar)
+        val startDatePicker = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+            startCalendar.set(Calendar.YEAR, year)
+            startCalendar.set(Calendar.MONTH, month)
+            startCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            updateStartLabel(startCalendar)
         }
 
-        binding.selectDayButton.setOnClickListener{
-            DatePickerDialog(requireContext(), datePicker, myCalendar.get(Calendar.YEAR), myCalendar.get(Calendar.MONTH) , myCalendar.get(Calendar.DAY_OF_MONTH)).show()
+        val endDatePicker = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+            endCalendar.set(Calendar.YEAR, year)
+            endCalendar.set(Calendar.MONTH, month)
+            endCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+
+            updateEndLabel(endCalendar)
+        }
+
+
+        binding.selectStartDayButton.setOnClickListener {
+            DatePickerDialog(
+                requireContext(),
+                startDatePicker,
+                startCalendar.get(Calendar.YEAR),
+                startCalendar.get(Calendar.MONTH),
+                startCalendar.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
+        binding.selectEndDayButton.setOnClickListener {
+            DatePickerDialog(
+                requireContext(),
+                endDatePicker,
+                endCalendar.get(Calendar.YEAR),
+                endCalendar.get(Calendar.MONTH),
+                endCalendar.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
 
         binding.btnSendRequest.setOnClickListener {
+            val name = binding.nameTv.text.toString()
             val leaveMessage = binding.etLeave.text.toString()
-            val startDate = binding.dayTextView.text.toString()
+            val startDate = binding.startDayTextView.text.toString()
+            val endDate = binding.endDayTextView.text.toString()
 
             if (leaveMessage.isNotEmpty() && startDate.isNotEmpty()) {
                 val userId = auth.currentUser?.uid ?: ""
-                val leaveRequest = LeaveRequest(leaveMessage, startDate)
-                database.child("leaveRequests").child(userId).push().setValue(leaveRequest)
+                val leaveRequest = LeaveRequest(name, leaveMessage, startDate, endDate)
+                database.child(name).setValue(leaveRequest)
                     .addOnSuccessListener {
                         Toast.makeText(requireContext(), "Leave request sent successfully", Toast.LENGTH_SHORT).show()
                     }
@@ -88,11 +117,18 @@ class Leave : Fragment() {
     }
 
 
-    private fun updateLable(myCalendar: Calendar){
+    private fun updateStartLabel(myCalendar: Calendar){
         val myFormat = "dd-MM-yyyy"
         val sdf = SimpleDateFormat(myFormat, Locale.UK)
-        binding.dayTextView.setText(sdf.format(myCalendar.time))
+        binding.startDayTextView.setText(sdf.format(myCalendar.time))
     }
+
+    private fun updateEndLabel(myCalendar: Calendar){
+        val myFormat = "dd-MM-yyyy"
+        val sdf = SimpleDateFormat(myFormat, Locale.UK)
+        binding.endDayTextView.setText(sdf.format(myCalendar.time))
+    }
+
 
     companion object {
         @JvmStatic
