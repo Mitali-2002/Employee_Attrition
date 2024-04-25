@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.insightcheckemployee.Activities.LoginPage
+import com.example.insightcheckemployee.Activities.ProfileViewModel
 import com.example.insightcheckemployee.Constants.ARG_PARAM1
 import com.example.insightcheckemployee.Constants.ARG_PARAM2
 import com.example.insightcheckemployee.databinding.FragmentProfileBinding
@@ -18,17 +20,7 @@ class Profile : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
-
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var viewModel: ProfileViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,9 +34,33 @@ class Profile : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Initialize FirebaseAuth
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
+        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
-        binding?.logoutTv?.setOnClickListener {
+        viewModel.displayName.observe(viewLifecycleOwner) { displayName -> binding.nameTv.text = displayName
+        }
+
+//        viewModel.email.observe(viewLifecycleOwner) { email ->
+//            binding.emailTv.text = email
+
+        // Set the user's email
+        val userEmail = auth.currentUser?.email
+        binding.emailTv.text = userEmail
+
+
+
+
+
+
+
+
+
+
+//        // Set the user's email
+//        val userEmail = auth.currentUser?.email
+//        binding.emailTv.text = userEmail
+
+        binding.logoutTv.setOnClickListener {
             if (auth.currentUser != null) {
                 auth.signOut()
                 startActivity(Intent(requireContext(), LoginPage::class.java))
@@ -57,16 +73,5 @@ class Profile : Fragment() {
         super.onDestroyView()
         // Clean up resources
         _binding = null
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Profile().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
     }
 }

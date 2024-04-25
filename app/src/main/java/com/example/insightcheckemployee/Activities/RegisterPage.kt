@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.util.Patterns
 import com.example.insightcheckemployee.databinding.ActivityRegisterPageBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
@@ -17,6 +18,7 @@ class RegisterPage : BaseActivity() {
         binding = ActivityRegisterPageBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         auth = Firebase.auth
+
 
         binding?.tvLoginPage?.setOnClickListener {
             startActivity(Intent(this,LoginPage::class.java))
@@ -50,7 +52,6 @@ class RegisterPage : BaseActivity() {
                 }
         }
     }
-
     private fun validateForm(name:String, email:String,password:String):Boolean {
         return when {
             TextUtils.isEmpty(name) -> {

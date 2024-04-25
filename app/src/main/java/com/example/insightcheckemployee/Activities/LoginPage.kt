@@ -4,9 +4,11 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.insightcheckemployee.Fragments.Profile
 import com.example.insightcheckemployee.R
 import com.example.insightcheckemployee.databinding.ActivitySignInPageBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -17,6 +19,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.auth
 
 class LoginPage : BaseActivity() {
@@ -67,10 +70,9 @@ class LoginPage : BaseActivity() {
                         finish()
                         hideProgressBar()
                     } else {
-                        showToast(this, "Can't login successfull")
+                        showToast(this, "Can't login successfully")
                         hideProgressBar()
                     }
-
                 }
         }
     }

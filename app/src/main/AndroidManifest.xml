@@ -15,7 +15,12 @@
         android:theme="@style/Theme.InsightCheckEmployee"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Activities.WorkToDoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ProfileViewModel"
+            android:exported="false" />
         <activity
             android:name=".Activities.UpdateProfile"
             android:exported="false" />

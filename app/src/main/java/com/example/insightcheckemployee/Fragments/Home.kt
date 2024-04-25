@@ -20,6 +20,7 @@ import com.example.insightcheckemployee.Activities.PersonalToDoActivity
 import com.example.insightcheckemployee.Activities.ReviewForm
 import com.example.insightcheckemployee.R
 import com.example.insightcheckemployee.Activities.SuggestionBox
+import com.example.insightcheckemployee.Activities.WorkToDoActivity
 
 import java.util.*
 
@@ -53,6 +54,7 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
         val goToSuggestionBox: View = view.findViewById(R.id.suggestionButton)
         val goToReviewFormButton: View = view.findViewById(R.id.reviewFormButton)
         val goToToDoActivityButton: View = view.findViewById(R.id.toDoButton)
+        val goToWorkToDo :View = view.findViewById(R.id.workToDoButton)
 
         setUpAdapter()
 
@@ -86,6 +88,10 @@ class Home : Fragment(), CalendarAdapter.onItemClickListener {
         goToToDoActivityButton.setOnClickListener {
             val intent1 = Intent(activity, PersonalToDoActivity::class.java)
             startActivity(intent1)
+        }
+        goToWorkToDo.setOnClickListener {
+            val intent2 = Intent(activity, WorkToDoActivity::class.java)
+            startActivity(intent2)
         }
 
 
